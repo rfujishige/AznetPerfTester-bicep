@@ -67,7 +67,7 @@ sudo ip route add 169.254.22.1/32 dev ipsec1
 sudo ip route add 192.168.0.0/25 dev ipsec1
 
 ### prep tester
-cd /home/azureuser
+cd /opt
 
 export GOCACHE=/root/gocache
 export XDC_CACHE_HOME=/root/gocache
@@ -88,7 +88,7 @@ After=network.target
 Type=simple
 User=root
 
-ExecStart=/home/azureuser/main
+ExecStart=/opt/AznetPerfTester/main
 
 Restart=always
 RestartSec=30
